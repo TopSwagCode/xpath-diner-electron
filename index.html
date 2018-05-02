@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Diner - Where we feast on CSS Selectors!</title>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/levels.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+   
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+    <meta property="og:url"           content="http://cssdiner.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="CSS Diner" />
+    <meta property="og:description"   content="A fun game to help you learn and practice CSS selectors." />
+    <meta property="og:image"         content="https://flukeout.github.io/images/fb-share.jpg" />
+  </head>
+
+  <body>
+    <div class="left-col">
+
+      <header>
+        Xpath Diner
+        <div class="logo">
+          <plate><apple /></plate>
+        </div>
+      </header>
+
+      <h2 class="order"></h2>
+
+      <div class="note">
+        <h3>No worries, you've got this!</h3>
+        <p>
+          You're about to learn Xpath Selectors!
+          Selectors are how you pick which elements to focus.
+        </p>
+
+        <h4>Exhibit 1 - A Xpath Selector</h4>
+
+        <pre>
+//Div[@class='header']
+</pre>
+
+        <p>
+          Here, the "//" and "Div" means it will check all paths until it finds a Div element in your document (XML/HTML). "[@class='header']" means the Div has to contain a class attribute with the value header.
+        </p>
+        <p>
+          To play, type in a Xpath selector in the editor below to select the correct items on the table.If you get it right, you'll advance to the next level.
+        </p>
+        <p>
+          Hover over the items on the table to see their HTML markup.
+        </p>
+        <p>
+          Get help with selectors on the right! &rarr;
+        </p>lectors on the right! &rarr;
+        </p>
+        <a class="note-toggle" href="#">Ok, got it!</a>
+      </div>
+
+      <a class="note-toggle" href="#">Help, I'm stuck!</a>
+
+      <div class="game-wrapper">
+        <div class="table-wrapper">
+          <div class="table-surface"></div>
+          <div class="nametags"></div>
+          <div class="table" id="gametable"></div>
+        </div>
+        <div class="table-edge">
+          <div class="table-leg"></div>
+          <div class="table-leg"></div>
+        </div>
+      </div>
+
+      <div class="editor">
+
+        <div class="editor-pane">
+          <div class="input-header">
+            <div class="file-name">webguitest.cs</div> C# Editor
+          </div>
+          <div class="file-window css-view">
+            <div class="line-numbers">
+              1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20
+            </div>
+              <input class="input-strobe" type="text" placeholder="Type in a Xpath selector"/><span class="plus">+</span><div class="enter-button">enter</div>
+            <div>
+            {<br/>
+
+            </div>
+            <div class="help">
+              <br/>
+              /* <br/>
+              Type a number to skip to a level.<br/>
+              Ex &rarr; "5" for level 5 <br/>*/
+            </div>
+          </div>
+        </div>
+
+        <div class="editor-pane html-view">
+          <div class="input-header">
+            <div class="file-name">table.html</div>
+            HTML Viewer
+          </div>
+          <div class="file-window">
+            <div class="line-numbers">1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20</div>
+            <div class="markup"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="what-is-this">
+        <p>
+          Originally Made by <a href="http://www.twitter.com/flukeout">@flukeout</a> &mdash; come say hi!
+        </p>
+        <p>
+          Ported to Electron by <a href="http://www.topswagcode.com/">TopSwagCode</a>
+        </p>
+        <p>
+          Have feedback or questions to the core game?<br/> Please file an isssue on <a href="https://github.com/flukeout/css-diner/issues">the Github repo</a>.
+        </p>
+        <p>
+          Electron app feedback or question?<br/> Please file an issue on <a href="https://github.com/kiksen1987/css-diner-electron/issues">the Github repo</a>.
+        </p>
+      </div>
+
+      <div class="helper"><!-- This is the popup that floats over table elements --></div>
+
+    </div><!-- /left-col -->
+
+    <div class="right-col">
+
+      <div class="help-wrapper">
+
+        <h1 class="level-header">
+          <span class="level-text"></span>
+          <span class="checkmark"></span>
+        </h1>
+
+        <div class="level-nav">
+          <a class="previous" href="#"></a>
+          <a class="next" href="#"></a>
+        </div>
+
+        <div class="level-progress"><div class="progress"></div></div>
+
+        <div class="display-help">
+          <h3 class="selector-name"></h3>
+          <h2 class="title"></h2>
+          <h3 class="syntax"></h3>
+          <div class="hint"></div>
+          <h4 class="examples-title">Examples</h4>
+          <div class="examples"></div>
+        </div>
+      </div>
+
+      <div class="level-menu">
+        <h2>Choose a level</h2>
+        <div class="levels"><!-- level links are inserted here--></div>
+        <a class="reset-progress" href="#">Reset Progress</a>
+      </div>
+
+      <div class="level-menu-toggle-wrapper">
+        <div class="level-menu-toggle"></div>
+      </div>
+
+    </div><!-- /right-col -->
+
+  <script>
+
+    // Small script that makes external links open in browser instead of electron window.
+    const shell = require('electron').shell;
+    $(document).on('click', 'a[href^="http"]', function(event) {
+        event.preventDefault();
+        shell.openExternal(this.href);
+    });
+    /*
+    Removed tracking from Electron app.
+
+    if(location.hostname != "localhost"){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-62998410-1', 'auto');
+      ga('send', 'pageview');
+    } else {
+      var ga = false;
+    }
+    */
+  </script>
+
+  </body>
+</html>
